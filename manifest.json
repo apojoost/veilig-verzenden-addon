@@ -1,0 +1,36 @@
+// ------------------- manifest.json -------------------
+// Bestandsnaam: manifest.json
+{
+  "manifest_version": 2,
+  "name": "Veilig Verzenden",
+  "version": "1.0",
+  "description": "Stuur e-mail via het Zorgmail-account met één klik in Thunderbird.",
+  // Root icons voor weergave in Add-on manager
+  "icons": {
+    "16": "icons/send-16.png",
+    "32": "icons/send-32.png",
+    "48": "icons/send-48.png",
+    "128": "icons/send-128.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "veilig-verzenden@zorgmail.nl",
+      "strict_min_version": "91.0"
+    }
+  },
+  "permissions": [
+    "compose",
+    "compose.send",
+    "accountsRead"
+  ],
+  "compose_action": {
+    "default_icon": {
+      "16": "icons/send-16.png",
+      "32": "icons/send-32.png"
+    },
+    "default_title": "Veilig Verzenden"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
